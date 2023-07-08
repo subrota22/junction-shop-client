@@ -17,7 +17,7 @@ const ProductDetails = () => {
     const product = useSelector((state) => state.reducers.getSingleProduct.product);
 
  React.useEffect(() => {
-    axios.get(`http://localhost:3021/get-product/${id}`)
+    axios.get(`https://junction-shop-subrota.vercel.app/get-product/${id}`)
     .then(res => {
         dispatch(getSingleProduct(res.data));
         setLoading(false);
@@ -37,20 +37,18 @@ const ProductDetails = () => {
             <Container>
                 <Row className="justify-content-md-center my-5">
 
-                    {<Col xs="12" md="6" lg="3" key={product?._id}>
-                        <Card style={{ width: '100%', height: "auto", margin: "18px" }} className="product">
-                            <Card.Img variant="top" src={product?.productImage} style={{ height: "200px" }} />
+                    {<Col xs="12" key={product?._id}>
+                        <Card style={{ width: '80%', height: "auto", margin: "auto" }} className="product">
+                            <Card.Img variant="top" src={product?.productImage} style={{ height: "500px" }} />
                             <hr />
                             <Card.Body>
-                                <Card.Title className="text-uppercase">{product?.category}</Card.Title>
+                                <Card.Title className="text-uppercase">Category: {product?.category}</Card.Title>
+                
                                 <Card.Text>
-                                    ${product?.rating}
+                                  Price: ${product?.price}
                                 </Card.Text>
                                 <Card.Text>
-                                    ${product?.price}
-                                </Card.Text>
-                                <Card.Text>
-                                    ${product?.description}
+                                   Description: {product?.description}
                                 </Card.Text>
                             </Card.Body>
                         </Card>

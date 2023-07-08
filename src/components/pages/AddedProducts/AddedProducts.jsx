@@ -18,7 +18,7 @@ const products = useSelector((state) => state) ;
 const allProducts = products.reducers?.getProducts?.products ;
 
 useEffect(() => {
-axios.get(`http://localhost:3021/get-products`)
+axios.get(`https://junction-shop-subrota.vercel.app/get-products`)
 .then(res => {
  dispatch(getProducts(res?.data?.data))
  setLoading(false) ;
@@ -43,12 +43,12 @@ if (loading) {
 
                         <Col xs="12" md="6"  lg="3" key={item?._id}>
                             <Card style={{ width: '100%', height:"auto", margin:"18px" }} className="product">
-                                <Card.Img variant="top" src={item?.productImage} style={{height:"200px"}}/>
+                                <Card.Img variant="top" src={item?.productImage} style={{height:"240px"}}/>
                                <hr />
                                 <Card.Body>
-                                    <Card.Title className="text-uppercase">{item?.category}</Card.Title>
+                                    <Card.Title className="text-uppercase">Category: {item?.category}</Card.Title>
                                     <Card.Text>
-                                      ${item?.price}
+                                   Price: ${item?.price}
                                     </Card.Text>
                                  <Link to={`/product-details/${item?._id}`}>  <Button variant="primary" className="button"> Show more <i className="fa-solid fa-arrow-right mx-2"></i> </Button></Link>
                                 </Card.Body>

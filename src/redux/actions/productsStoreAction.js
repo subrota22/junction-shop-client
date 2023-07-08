@@ -27,11 +27,11 @@ export const postFailure = (error) => {
   }
 };
 
-// Thunk action creator
+//  action creator
 export const postData = (data) => {
   return ( dispatch ) => {
      dispatch(postRequest("request"));
-     return  fetch('http://localhost:3021/post-product', {
+     return  fetch('https://junction-shop-subrota.vercel.app/post-product', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
@@ -41,7 +41,7 @@ export const postData = (data) => {
           .then(res => res.json())
             .then((data) => {
             if(data.data){
-                toast.success("Congrasulation you product data added successfully !!");
+                toast.success("Congrasulation your product data added successfully !!");
                 dispatch(postSuccess("success"));
             }
             })
