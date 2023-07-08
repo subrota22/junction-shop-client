@@ -1,0 +1,26 @@
+
+.addProduct{
+width: 60%;
+background-color: #0E4191;
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+}
+
+.addProductTitle{
+    background-color: #10c543;
+    color: white;
+    border-top-right-radius:35px;
+    border-bottom-right-radius: 35px;
+    height: 58px;
+    width: 320px;
+    padding-top: 18px;
+    text-align: center;
+    box-shadow: 0 0 5px 0 rgba(14, 226, 237, 0.2);
+    transform: translateY(382px);
+}
+.formDiv:hover > .addProductTitle {
+    transform: translateY(52px);
+    background-color: #0E4191;
+    transition:  transform 3s, background-color 3s;
+
+}  

@@ -1,13 +1,77 @@
-body {
+@import "~react-image-gallery/styles/css/image-gallery.css";
+.body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color:#06245B;
+  color: white;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.buttonHide{
+  display: none;
+}
+
+.buttonDisplay{
+  display: block;
+}
+
+.mainDiv{
+  width: 80%;
+  margin: auto;
+  margin-top: 200px;
+}
+.value{color: rgb(16, 72, 16);}
+
+
+.button:hover{
+box-shadow:  0 0 21px 0px rgba(0, 255, 0, 0.5);
+filter: brightness(2) blur(0);
+transition: box-shadow 0.6s,  filter 0.6s, ;
+}
+.product:hover{border-left: 3px solid blue; transform: scale(1.1); 
+transition:  border-left 0.6s,  transform 0.6s, ;
+}
+
+.cardTitle{
+  border: 2px solid lime;
+  border-radius: 12px;
+  padding: 10px;
+  width: 67%;
+}
+.card{
+  background-color:#06245B;
+  color: white;
+  box-shadow:  0 0 5px 0 rgba(22, 22, 231, 0.646);
+}
+.price{
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background-image: linear-gradient(to left, #1F0C92, #0AA08B );
+  width: 10%;
+  padding: 15px;
+  color: white;
+  font: bolder;
+  margin: 10px;
+}
+.price:hover{
+ filter: brightness(1.7);
+ color: yellow;
+ transform: scale(1.4) rotate(360deg) translateX(-50px);
+ margin: 10px;
+ transition: transform 0.8s ;
+}
+
+.carousel-item > img{
+  height: 450px;
+}
+
+.carousel-item{
+  text-shadow:  0 0  0 3px;
+}
+
