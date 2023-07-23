@@ -59,7 +59,7 @@ export default function Page() {
         <div>
             {cards?.map(function (item) {
                 return (
-                    <Card title={item?.title.en} linkTitle={item?.link_title} href={item?.link} text={item?.text} ClassName={item?.id === 1 ? 'card__link--red' : undefined} target={item?.id === 1 ? '_blank' : undefined}
+                    <Card title={item?.title.en} linkTitle={item?.link_title} href={item?.link} text={item?.text} linkClassName={item?.id === 1 ? 'card__link--red' : undefined} target={item?.id === 1 ? '_blank' : undefined}
                         onClick={analyticsTrackClick(item?.link)} />
                 );
             })}
