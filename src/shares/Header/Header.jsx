@@ -31,7 +31,7 @@ function Header() {
             <li><NavLink to="/portfolio"  style={{color:"white"}}>Portfolio</NavLink></li>
             <li><NavLink to="/pricing"  style={{color:"white"}}>Pricing</NavLink></li>
             <li><NavLink to="/blog"  style={{color:"white"}}>Blog</NavLink></li>
-            <li><a href="/all-products"  style={{color:"white"}}>All products</a></li>
+            <li><NavLink to="/all-products"  style={{color:"white"}}>All products</NavLink></li>
             <li><NavLink to="/contact"  style={{color:"white"}}>Contact</NavLink></li>
    
           </ul>

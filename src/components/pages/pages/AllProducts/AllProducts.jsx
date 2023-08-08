@@ -10,15 +10,20 @@ import { NavLink } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { postFailure, postRequest, postSuccess } from '../../../../redux/actions/productsStoreAction';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet';
 const AllProducts = () => {
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
+ 
   const dispatch = useDispatch();
   const products = useSelector((state) => state);
   const allProducts = products.reducers?.getProducts?.products;
 
   let productsInfo = allProducts;
   productsInfo = productsInfo.filter((value) => value?.category.toLocaleLowerCase().includes(search.toLocaleLowerCase()));
+  //sorting of data 
+
+
   // Queries
   const { refetch } = useQuery({
     queryKey: [dispatch], queryFn: () =>
@@ -42,6 +47,7 @@ const AllProducts = () => {
       name: <h5 style={{ color: 'lime' }}>Category</h5>,
       selector: (row) => <p style={{ color: '#04427C', fontSize: "16px" }}>{row?.category ? row?.category : "not found"}</p>,
       sortable: true,
+      sortFunction: (a, b) => a - b, 
     },
     {
       name: <h5 style={{ color: 'lime' }}> Description</h5>,
@@ -50,16 +56,19 @@ const AllProducts = () => {
           row?.description?.slice(0, 40) ? row?.description?.slice(0, 40) + "..." : "not found"
           : row?.description ? row?.description : "not found"}</p>,
       sortable: true,
+      sortFunction: (a, b) => a - b, 
     },
     {
       name: <h5 style={{ color: 'lime' }}> Price</h5>,
       selector: (row) => <p style={{ color: '#04427C', fontSize: "16px" }}>${row?.price ? row?.price : "not found"}</p>,
       sortable: true,
+      sortFunction: (a, b) => a - b, 
     },
     {
       name: <h5 style={{ color: 'lime' }}> Rating</h5>,
       selector: (row) => <p style={{ color: '#04427C', fontSize: "16px" }}> ⭐ {row?.rating ? row?.rating : "not found"}</p>,
       sortable: true,
+      sortFunction: (a, b) => a - b, 
     },
     {
       name: <h5 style={{ color: 'lime' }}> Image</h5>,
@@ -73,8 +82,9 @@ const AllProducts = () => {
       name: <h5 style={{ color: 'lime' }}>Delete</h5>,
       selector: (row) => <AiFillDelete
         style={{ fontSize: "25px", color: "red" }}
+        className='deleteIcon'
         onClick={() => deleteProduct(row?._id, row?.category)}></AiFillDelete>,
-    },
+    }
   ]
   //delete product 
 
@@ -144,6 +154,9 @@ const AllProducts = () => {
 
   return (
     <>
+    <Helmet>
+      <title>All products </title>
+    </Helmet>
       <div style={{ height: "80px", marginBottom: "25px" }}></div>
       <div className="w-75 my-5 mx-auto d-flex">
         <input type="text" onChange={(e) => setSearch(e.target.value)} className='form-control' placeholder='Search by product category' />
@@ -156,11 +169,10 @@ const AllProducts = () => {
           sortIcon={sortIcon}
           data={productsInfo}
           columns={columns}
-          fixedHeaderScrollHeight={"220px"}
-          selectableRows
-          selectableRowsVisibleOnly
-          highlightOnHover
           striped
+          highlightOnHover
+          fixedHeader
+          fixedHeaderScrollHeight="700px"
         />
       </div>
 

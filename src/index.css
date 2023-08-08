@@ -75,3 +75,4 @@ transition:  border-left 0.6s,  transform 0.6s, ;
   text-shadow:  0 0  0 3px;
 }
 
+.deleteIcon:hover{cursor: pointer;}
