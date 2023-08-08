@@ -8,9 +8,11 @@ const ToolkitCounter = () => {
         <>
         <Helmet><title> Toolkit counter  </title></Helmet>
        <div className="my-5">
-       <Coin></Coin>
-            <Counter></Counter>
+        <br />  <br />  <br />  <br />  <br />
+         <Coin></Coin>
+           <Counter></Counter>
        </div>
+       <br />  <br />  <br />
         </>
     );
 };

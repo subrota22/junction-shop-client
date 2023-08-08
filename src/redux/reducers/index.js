@@ -8,3 +8,6 @@ import { getAllProductsReducer, getSingleProductReducer,
  getProducts:getAllProductsReducer,
  getSingleProduct:getSingleProductReducer
 })
+
+
+

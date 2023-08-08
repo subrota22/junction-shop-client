@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { Button, Container } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import { useDispatch } from 'react-redux';
-import { postData } from '../../../redux/actions/productsStoreAction';
+import { postFailure, postRequest, postSuccess } from '../../../redux/actions/productsStoreAction';
 import "./AddProduct.css" ;
 import { Helmet } from 'react-helmet';
+import { toast } from 'react-toastify';
 
 const AddProduct = () => {
     const [data, setData] = useState({});
@@ -13,8 +14,26 @@ const AddProduct = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Dispatch the action to post data
-        dispatch(postData(data));
-        e.target.reset();
+        dispatch(postRequest("request"));
+        return  fetch('https://junction-shop-subrota.vercel.app/post-product', {
+               method: 'POST',
+               headers: {
+                 'Content-Type': 'application/json'
+               },
+               body: JSON.stringify({...data, date: new Date()})
+             })
+             .then(res => res.json())
+               .then((data) => {
+               if(data.data){
+                   toast.success("Congrasulation your product data added successfully !!");
+                   dispatch(postSuccess("success"));
+                   e.target.reset();
+               }
+               })
+               .catch((error) => {
+              console.log("error", error);
+             dispatch(postFailure(error));
+         });
     }
 
     const handleInputFeild = (e) => {

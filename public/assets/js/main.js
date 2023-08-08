@@ -1,12 +1,7 @@
-/**
-* Template Name: Sailor
-* Updated: May 30 2023 with Bootstrap v5.3.0
-* Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+/* eslint-disable no-undef */
+
+
 (function() {
-  "use strict";
 
   /**
    * Easy selector helper function
@@ -119,12 +114,12 @@
       on('click', '#portfolio-flters li', function(e) {
         e.preventDefault();
         portfolioFilters.forEach(function(el) {
-          el.classNameList.remove('filter-active');
+          el.classNameList?.remove('filter-active');
         });
-        this.classNameList.add('filter-active');
+        this.classNameList?.add('filter-active');
 
-        portfolioIsotope.arrange({
-          filter: this.getAttribute('data-filter')
+        portfolioIsotope?.arrange({
+          filter: this?.getAttribute('data-filter')
         });
       }, true);
     }
@@ -134,13 +129,14 @@
   /**
    * Initiate portfolio lightbox 
    */
-  const portfolioLightbox = GLightbox({
+ GLightbox({
     selector: '.portfolio-lightbox'
   });
 
   /**
    * Portfolio details slider
    */
+  
   new Swiper('.portfolio-details-slider', {
     speed: 400,
     loop: true,
@@ -158,7 +154,7 @@
   /**
    * Initiate portfolio details lightbox 
    */
-  const portfolioDetailsLightbox = GLightbox({
+ GLightbox({
     selector: '.portfolio-details-lightbox',
     width: '90%',
     height: '90vh'
@@ -167,6 +163,7 @@
   /**
    * Skills animation
    */
+
   let skilsContent = select('.skills-content');
   if (skilsContent) {
     new Waypoint({

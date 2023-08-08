@@ -1,5 +1,3 @@
-
-import { toast } from "react-toastify";
 // Action type constants
 const POST_REQUEST = 'POST_REQUEST';
 const POST_SUCCESS = 'POST_SUCCESS';
@@ -27,28 +25,5 @@ export const postFailure = (error) => {
   }
 };
 
-//  action creator
-export const postData = (data) => {
-  return ( dispatch ) => {
-     dispatch(postRequest("request"));
-     return  fetch('https://junction-shop-subrota.vercel.app/post-product', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({...data, date: new Date()})
-          })
-          .then(res => res.json())
-            .then((data) => {
-            if(data.data){
-                toast.success("Congrasulation your product data added successfully !!");
-                dispatch(postSuccess("success"));
-            }
-            })
-            .catch((error) => {
-           console.log("error", error);
-          dispatch(postFailure(error));
-      });
-  };
-};
+
 

@@ -38,10 +38,10 @@ const Team = () => {
                     <span>Chief Executive Officer</span>
                     <p>Explicabo voluptatem mollitia et repellat</p>
                     <div className="social">
-                      <NavLink to="/"><i className="ri-twitter-fill"></i></NavLink>
-                      <NavLink to="/"><i className="ri-facebook-fill"></i></NavLink>
-                      <NavLink to="/"><i className="ri-instagram-fill"></i></NavLink>
-                      <NavLink to="/"> <i className="ri-linkedin-box-fill"></i> </NavLink>
+                      <NavLink to="/"><i class="fa-brands fa-facebook"></i></NavLink>
+                      <NavLink to="/"><i class="fa-brands fa-instagram"></i></NavLink>
+                      <NavLink to="/"><i class="fa-brands fa-twitter"></i></NavLink>
+                      <NavLink to="/"> <i class="fa-brands fa-linkedin"></i> </NavLink>
                     </div>
                   </div>
                 </div>
@@ -55,10 +55,10 @@ const Team = () => {
                     <span>Product Manager</span>
                     <p>Aut maiores voluptates amet et quis</p>
                     <div className="social">
-                      <NavLink to="/"><i className="ri-twitter-fill"></i></NavLink>
-                      <NavLink to="/"><i className="ri-facebook-fill"></i></NavLink>
-                      <NavLink to="/"><i className="ri-instagram-fill"></i></NavLink>
-                      <NavLink to="/"> <i className="ri-linkedin-box-fill"></i> </NavLink>
+                      <NavLink to="/"><i class="fa-brands fa-facebook"></i></NavLink>
+                      <NavLink to="/"><i class="fa-brands fa-instagram"></i></NavLink>
+                      <NavLink to="/"><i class="fa-brands fa-twitter"></i></NavLink>
+                      <NavLink to="/"> <i class="fa-brands fa-linkedin"></i> </NavLink>
                     </div>
                   </div>
                 </div>
@@ -72,10 +72,10 @@ const Team = () => {
                     <span>CTO</span>
                     <p>Quisquam facilis cum velit laborum corrupti</p>
                     <div className="social">
-                      <NavLink to="/"><i className="ri-twitter-fill"></i></NavLink>
-                      <NavLink to="/"><i className="ri-facebook-fill"></i></NavLink>
-                      <NavLink to="/"><i className="ri-instagram-fill"></i></NavLink>
-                      <NavLink to="/"> <i className="ri-linkedin-box-fill"></i> </NavLink>
+                      <NavLink to="/"><i class="fa-brands fa-facebook"></i></NavLink>
+                      <NavLink to="/"><i class="fa-brands fa-instagram"></i></NavLink>
+                      <NavLink to="/"><i class="fa-brands fa-twitter"></i></NavLink>
+                      <NavLink to="/"> <i class="fa-brands fa-linkedin"></i> </NavLink>
                     </div>
                   </div>
                 </div>
@@ -89,10 +89,10 @@ const Team = () => {
                     <span>Accountant</span>
                     <p>Dolorum tempora officiis odit laborum officiis</p>
                     <div className="social">
-                      <NavLink to="/"><i className="ri-twitter-fill"></i></NavLink>
-                      <NavLink to="/"><i className="ri-facebook-fill"></i></NavLink>
-                      <NavLink to="/"><i className="ri-instagram-fill"></i></NavLink>
-                      <NavLink to="/"> <i className="ri-linkedin-box-fill"></i> </NavLink>
+                      <NavLink to="/"><i class="fa-brands fa-facebook"></i></NavLink>
+                      <NavLink to="/"><i class="fa-brands fa-instagram"></i></NavLink>
+                      <NavLink to="/"><i class="fa-brands fa-twitter"></i></NavLink>
+                      <NavLink to="/"> <i class="fa-brands fa-linkedin"></i> </NavLink>
                     </div>
                   </div>
                 </div>

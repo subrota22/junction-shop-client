@@ -16,7 +16,7 @@ export const selectedProducts = (products) => {
 export const getProducts = (products) => {
     return {
         type: ActionTypes.GET_ALL_PRODUCTS,
-        payload: products,
+        payload: products, //recive data
     }
 }
 

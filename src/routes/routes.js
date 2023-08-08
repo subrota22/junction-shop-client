@@ -1,5 +1,4 @@
 import { createBrowserRouter } from "react-router-dom";
-
 import Home from "../components/Home/Home/Home";
 import ToolkitCounter from "../components/pages/ToolkitCounter/ToolkitCounter";
 import Products from "../components/pages/Products/Products";
@@ -17,6 +16,8 @@ import Team from "../components/pages/Team/Team";
 import TestiMonal from "../components/pages/TestiMonal/TestiMonal";
 import AddProduct from "../components/pages/AddProduct/AddProduct";
 import AddedProducts from "../components/pages/AddedProducts/AddedProducts";
+import AllProducts from "../components/pages/pages/AllProducts/AllProducts";
+import EditProduct from "../components/pages/pages/EditProduct/EditProduct";
 
 export const routers = createBrowserRouter([
     {
@@ -65,6 +66,12 @@ export const routers = createBrowserRouter([
             },
             {
                 path: "/product-details/:id", element: <AddedProductDetails></AddedProductDetails>
+            },
+            {
+                path: "/all-products", element: <AllProducts></AllProducts>
+            },
+            {
+              path:"/edit-product/:id", element:<EditProduct></EditProduct>
             },
             
             {
