@@ -31,7 +31,7 @@ const Contact = () => {
 
                         <div className="row mt-5 p-4">
                             <div className="col-lg-4">
-                                <div className="info">
+                                <div className="info p-3 rounded">
                                     <div className="address">
                                         <i className="bi bi-geo-alt"></i>
                                         <h4>Location:</h4>
@@ -76,7 +76,7 @@ const Contact = () => {
                                         <div className="error-message"></div>
                                         <div className="sent-message">Your message has been sent. Thank you!</div>
                                     </div>
-                                    <div className="text-center"><button type="submit">Send Message</button></div>
+                                    <div className="text-center"><button className='w-75'  type="submit">Send Message</button></div>
                                 </form>
 
                             </div>
