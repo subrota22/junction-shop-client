@@ -71,7 +71,7 @@ const AllProducts = () => {
     },
     {
       name: <h5 style={{ color: 'lime' }}>Delete</h5>,
-      selector: (row) => <AiFillDelete title='Double click on this icon'
+      selector: (row) => <AiFillDelete
         style={{ fontSize: "25px", color: "red" }}
         onClick={() => deleteProduct(row?._id, row?.category)}></AiFillDelete>,
     },
